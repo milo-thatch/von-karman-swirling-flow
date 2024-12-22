@@ -14,7 +14,7 @@ $$
 2FG + G^\prime H = G^{\prime\prime},
 $$
 
-To do so, the code splits the governing equations into a system of first-order ODEs with the auxiliary variables $A=F^\prime$ and $B=G^\prime$. A block-elimination (Thomas) algorithm is then used to solve the system iteratively, the nonlinearity being treated with the Newton-Raphson method.
+The code splits the governing equations into a system of first-order ODEs with the auxiliary variables $A=F^\prime$ and $B=G^\prime$. A block-elimination (Thomas) algorithm is then used to solve the system iteratively, the nonlinearity being treated with the Newton-Raphson method.
 
 The main assumptions:
 <ul>
@@ -24,20 +24,20 @@ The main assumptions:
   <li>no rotation at infinity</li>
 </ul>
 
-To run, first install gfortran and LAPACK by running the commands
+For Ubuntu/Linux: before running the provided bash script, first install gfortran and LAPACK by running the commands
 ```console
 sudo apt-get install gfortran
 sudo apt-get install liblapack-dev
 ```
-then navigate to the code's directory and allow your machine to run the bash script provided
+then navigate to the code's directory and allow your machine to execute the script
 ```
 chmod +x deploy.sh
 ```
-and run by typing
+then run by typing
 ```
 ./deploy.sh
 ```
-The input.in file is used to specify the number of points and domain width.
+The input.in file is used to specify the number of points and domain width. A uniform grid is employed.
 
 ## References
 Aref, H., & Balachandar, S. (2018). *A first course in computational fluid dynamics*. Cambridge University Press. ISBN: 9781107178519.
